@@ -36,7 +36,7 @@ const initialStudents =
   { roll: 30, id: "O210250", mid1: 0, mid2: 12, mid3: 6, wat1: 4, wat2: 10, wat3: 7, wat4: 9 },
   { roll: 31, id: "O210263", mid1: 15, mid2: 15, mid3: 14, wat1: 6, wat2: 10, wat3: 5, wat4: 8 },
   { roll: 32, id: "O210271", mid1: 13, mid2: 14, mid3: 12, wat1: 5, wat2: 10, wat3: 3, wat4: 5 },
-  { roll: 33, id: "O210293", mid1: 14, mid2: 9, mid3: 13, wat1: 5, wat2: 9, wat3: 7, wat4: 1 },
+  { roll: 33, id: "O210293", mid1: 14, mid2: 9, mid3: 13, wat1: 5, wat2: 9, wat3: 7, wat4: 10 },
   { roll: 34, id: "O210299", mid1: 10, mid2: 12, mid3: 12, wat1: 5, wat2: 9, wat3: 4, wat4: 6 },
   { roll: 35, id: "O210303", mid1: 15, mid2: 13, mid3: 12, wat1: 6, wat2: 8, wat3: 7, wat4: 8 },
   { roll: 36, id: "O210308", mid1: 14, mid2: 15, mid3: 14, wat1: 7, wat2: 9, wat3: 7, wat4: 8 },
