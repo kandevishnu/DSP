@@ -329,83 +329,11 @@ export default function StudentSearch() {
           )
         )}
       </div>
-      <LikeButton />
       <footer style={{ textAlign: "center", marginTop: "20px", color: "#666" }}>
         <p>Developed by <a href="" target="_blank" rel="noopener noreferrer">Kande Vishnu</a></p>
         <p>Version 1.0.0</p>
         <p>© 2025 Note that these results are declared today.</p>
       </footer>
     </>
-  );
-}
-
-function LikeButton() {
-  const [likes, setLikes] = useState(0);
-  const [liked, setLiked] = useState(false);
-  const [animate, setAnimate] = useState(false);
-
-  // Load state from localStorage on mount
-  useEffect(() => {
-    const storedLiked = localStorage.getItem("liked");
-    const storedLikes = localStorage.getItem("likes");
-
-    if (storedLiked === "true") setLiked(true);
-    if (storedLikes) setLikes(Number(storedLikes));
-  }, []);
-
-  const handleLike = () => {
-    if (liked) return;
-
-    const newLikes = likes + 1;
-    setLikes(newLikes);
-    setLiked(true);
-    setAnimate(true);
-
-    // Save to localStorage
-    localStorage.setItem("liked", "true");
-    localStorage.setItem("likes", newLikes.toString());
-
-    // Reset animation
-    setTimeout(() => setAnimate(false), 300);
-  };
-
-  return (
-    <div className="flex flex-col items-center rounded space-y-3 my-5">
-      <button
-        onClick={handleLike}
-        disabled={liked}
-        className={`flex items-center space-x-2 p-4 shadow-md transition duration-300 ${
-          liked ? "bg-pink-100" : "bg-white hover:shadow-xl"
-        }`}
-      >
-        <motion.div
-          animate={animate ? { scale: [1, 1.5, 1], color: "#ef4444" } : {}}
-          transition={{ duration: 0.3 }}
-        >
-          <Heart
-            size={32}
-            fill={liked ? "#ef4444" : "none"}
-            stroke="#ef4444"
-            strokeWidth={2}
-          />
-        </motion.div>
-        <span className="text-lg font-semibold text-gray-700">{likes}</span>
-      </button>
-
-      <AnimatePresence>
-        {animate && (
-          <motion.div
-            initial={{ opacity: 0, y: 0 }}
-            animate={{ opacity: 1, y: -20 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="text-red-500 font-bold"
-          >
-            +1 ❤️
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {liked && <p className="text-sm text-gray-500">You’ve already liked this.</p>}
-    </div>
   );
 }
