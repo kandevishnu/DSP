@@ -327,6 +327,11 @@ export default function StudentSearch() {
           )
         )}
       </div>
+      <footer style={{ textAlign: "center", marginTop: "20px", color: "#666" }}>
+        <p>Developed by <a href="" target="_blank" rel="noopener noreferrer">Kande Vishnu</a></p>
+        <p>Version 1.0.0</p>
+        <p>© 2025 Note that these results are declared today.</p>
+      </footer>
     </>
   );
 }
